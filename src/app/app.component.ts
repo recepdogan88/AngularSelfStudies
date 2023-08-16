@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  name="RECEP DOGAN "
+  user = 'Recep';
+
+  items = [
+    {description: "kahvalti",action:"no"},
+    {description: "spor",action:"no"},
+    {description: "kitap",action:"no"}
+  ]
 }
