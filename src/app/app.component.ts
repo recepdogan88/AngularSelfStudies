@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Model } from './model';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  user = 'Recep';
+   model=new Model()
 
-  items = [
-    {description: "kahvalti",action:"no"},
-    {description: "spor",action:"no"},
-    {description: "kitap",action:"no"}
-  ]
+  getName(){
+    return this.model.user;
+  }
 }
