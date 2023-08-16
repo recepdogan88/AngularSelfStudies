@@ -27,13 +27,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of model.items; let i = index;">
+          <tr *ngFor="let item of getItems(); let i = index;">
             <td>{{ i+1 }}</td>
             <td>{{ item.description }}</td>
-            <td>{{ item.action }}</td>
-            <td>
-              <input type="checkbox" [(ngModel)]="item.action"  name="" id="">
+            <td [ngSwitch]="item.action">
+              <span *ngSwitchCase="true">Yes</span>
+              <span *ngSwitchCase="false">No</span>
             </td>
+
+              <input type="checkbox" [(ngModel)]="item.action"  name="" id="">
+
           </tr>
         </tbody>
       </table>
